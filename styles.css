@@ -63,12 +63,109 @@ table {
 }
 
 /* GLOBAL STYLES (MOBILE FIRST (SMALL) */
-header {
-    background-color: var(--black);
+html {
+    font-family: sans-serif;
+}
+
+nav {
+  background-color: var(--black);
+}
+nav ul {
+  width: 100%;
+  margin:0;
+  padding:0;
+  list-style:none;
+  overflow:hidden;
+  text-align:center;
+  max-height: 0;
+}
+nav h2 {
+  visibility:hidden;
+  height:1px;
+}
+nav li a {
+  display:block;
+  font-family:sans-serif;
+  font-size:1.5rem;
+  padding:1rem;
+  text-transform:uppercase;
+  font-weight:bold;
+  text-decoration:none;
+  color: var(--blue);
+  transition: background-color .3s ease-in;
+}
+nav a:hover, nav input:hover {
+    background-color: var(--blue);
+    color: var(--black);
+}
+nav label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 1.5rem;
+    user-select: none;
+}
+/* BUILDS THE MIDDLE LILNE OF THE HAMBURGER */
+label span {
+    background-color: var(--white);
+    display: block;
+    height: .25rem;
+    position: absolute;
+    transition: background-color .3s ease-out;
+    width: 2rem;
+    right: 1rem;
+}
+/* BUILDS THE TOP AND BOTTOM LINES OF THE HAMBURGER*/
+label span:before, label span:after {
+    background: var(--white);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+    right: 0;
+}
+label span:before {
+    top: .75rem;
+}
+label span:after {
+    top: -.75rem;
+}
+input {
+    display: none;
+    position: absolute;
+    right: 1rem;
+}
+/* ADDS HEIGHT THE NAV WHEN IT'S DROPPED DOWN */
+input:checked ~ ul {
+    max-height: 500px;
+    margin-left: 4rem;
 }
 
 h1 {
+    color: var(--blue);
+    font-weight: bold;
+    font-size: 2rem;
+    padding-top: 1rem;}
 
+header {
+    background-color: var(--black);
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    float: left;
+    margin-top: 1rem;
+}
+
+#request {
+    color: var(--white);
+}
+
+#request h2 {
+    font-weight: bold;
+    font-size: 2rem;
 }
 
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
@@ -149,6 +246,23 @@ header img {
 
 
 /* MEDIA QUERIES (MEDIUM) */ 
+@media screen and (min-width: 600px){
+    nav ul {
+        overflow:visible;
+        position:absolute;
+        top: 1.5rem;
+        left:.5rem;
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr;
+    }
+
+    nav li a {
+        display:inline-block;
+    }  
+
+    label span, input {
+        display:none;
+    }
 
     #results {
         grid-template-columns: 1fr 1fr;
@@ -163,6 +277,5 @@ header img {
     .bar-chart {
         width: 50%;
     }
-
-
+}
 /* MEDIA QUERIES (LARGE) */
