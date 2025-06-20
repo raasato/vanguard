@@ -159,13 +159,21 @@ header img {
     margin-top: 1rem;
 }
 
-#request {
-    color: var(--white);
-}
-
 #request h2 {
     font-weight: bold;
     font-size: 2rem;
+    margin-top: 12rem;
+}
+
+#request a {
+    text-decoration: none;
+    color: var(--white);
+    border: solid var(--blue) 1px;
+    border-radius: 10px;
+    background-color: var(--blue);
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
@@ -175,6 +183,7 @@ header img {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+    backdrop-filter: blur(20px);
 }
 
 /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
@@ -182,10 +191,12 @@ header img {
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/vanguard-hero.jpg') no-repeat center center/cover;
     height: 80vh;
     display: grid;
+    grid-template-rows: .25fr .25fr .25fr;
     place-items: center;
     text-align: center;
     padding: 1rem;
     overflow: hidden;
+    color: var(--white);
 }
 
 /* ADD FLOATING SVG LOGO BEFORE THE H1 */
