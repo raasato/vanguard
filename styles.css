@@ -154,10 +154,6 @@ header {
     display: flex;
 }
 
-#logo {
-    align-items: center;
-}
-
 header div {
     background-color: var(--black);
 }
@@ -173,6 +169,31 @@ h1 {
 header img {
     margin: 1rem;
     float: left;
+}
+
+.block {
+    grid-row-start: 2;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+}
+
+#request h2 {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+#request a {
+    color: var(--white);
+    text-decoration: none;
+    border: solid 1px var(--blue);
+    border-radius: 10px;
+    background-color: var(--blue);
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-top: .5rem;
 }
 
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
@@ -194,7 +215,7 @@ html {
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/vanguard-hero.jpg') no-repeat center center/cover;
     height: 80vh;
     display: grid;
-    grid-template-rows: .25fr .25fr .25fr;
+    grid-template-rows: 1fr 1fr 1fr;
     place-items: center;
     text-align: center;
     padding: 1rem;
