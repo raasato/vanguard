@@ -65,7 +65,8 @@ table {
 /* GLOBAL STYLES (MOBILE FIRST (SMALL) */
 nav {
     background-color: var(--black);
-    float: right;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 nav ul {
@@ -91,12 +92,13 @@ nav li a {
     text-transform: uppercase;
     font-weight: bold;
     text-decoration: none;
-    color: var(--white);
+    color: var(--blue);
     transition: background-color .3s ease-in;
 }
 
 nav a:hover, nav input:hover {
-    background-color: var(--black);
+    background-color: var(--blue);
+    color: var(--black);
 }
 
 nav label {
@@ -104,6 +106,7 @@ nav label {
     display: inline-block;
     padding: 1.5rem;
     user-select: none;
+    margin-top: 1.5rem;
 }
 
 /*builds middle line*/
@@ -142,15 +145,16 @@ input {
 /*adds height to drop down menu*/
 input:checked ~ ul {
     max-height: 500px;
-}
-
-/*location of bars*/
-input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
-    top: 0;
+    display: inline-grid;
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 
 header {
     display: flex;
+}
+
+#logo {
     align-items: center;
 }
 
@@ -163,10 +167,12 @@ h1 {
     margin-top: 2rem;
     font-weight: bold;
     font-size: 2rem;
+    float: left;
 }
 
 header img {
     margin: 1rem;
+    float: left;
 }
 
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
