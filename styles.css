@@ -242,6 +242,20 @@ table {
     background-color: var(--black);
 }
 
+th, td {
+    text-align: center;
+    padding: 1.25rem 2rem;
+    border: solid var(--charcoal) 1px;
+}
+
+th {
+    background-color: var(--black);
+}
+
+tr:nth-child(odd) {
+    background-color: var(--charcoal);
+}
+
 #contact p {
     padding-bottom: 1rem;
 }
