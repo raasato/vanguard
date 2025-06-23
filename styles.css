@@ -196,6 +196,9 @@ header img {
     font-weight: bold;
     font-size: 1.25rem;
     margin-top: .5rem;
+    max-width: fit-content;
+    max-height: fit-content;
+    justify-self: center;
 }
 
 h2 {
@@ -207,11 +210,13 @@ h2 {
 #results, #profits, #growth {
     background-color: var(--blue);
     color: var(--white);
+    padding: 1rem;
 }
 
 #contact {
     background-color: var(--black);
     color: var(--white);
+    padding: 1rem;
 }
 
 #consulting, #solutions, #mergers, #transformation, #information, #advisory, #innovation {
@@ -219,6 +224,30 @@ h2 {
     border: solid var(--blue) 1px;
     border-radius: 10px;
     color: var(--white);
+    padding: 1rem;
+    margin: 1rem;
+}
+
+h3 {
+    font-weight: bold;
+    padding: 1rem;
+    font-size: 1.25rem;
+}
+
+#profits h2 {
+    margin-top: 0;
+}
+
+table {
+    background-color: var(--black);
+}
+
+#contact p {
+    padding-bottom: 1rem;
+}
+
+input {
+    background-color: var(--white);
 }
 
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
