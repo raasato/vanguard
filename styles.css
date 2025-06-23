@@ -247,7 +247,36 @@ table {
 }
 
 input {
-    background-color: var(--white);
+    display: block;
+    border: var(--blue) solid 2px;
+    margin-bottom: .5rem;
+    width: 98%;
+    height: 2rem;
+}
+
+#submit {
+    background-color: var(--blue);
+    border: solid var(--blue) 1px;
+    border-radius: 10px;
+    margin-top: 1rem;
+    color: var(--white);
+    font-weight: bold;
+    font-size: 1rem;
+    height: 3rem;
+}
+
+footer div {
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+}
+
+footer p {
+    padding: .25rem;
+}
+
+footer a {
+    color: var(--blue);
 }
 
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
