@@ -66,6 +66,7 @@ table {
 nav {
     background-color: var(--black);
     display: grid;
+    justify-content: end;
     grid-template-columns: 1fr 1fr;
 }
 
@@ -148,6 +149,7 @@ input:checked ~ ul {
     display: inline-grid;
     grid-column-start: 1;
     grid-column-end: 3;
+    justify-content: space-around;
 }
 
 header {
@@ -194,6 +196,29 @@ header img {
     font-weight: bold;
     font-size: 1.25rem;
     margin-top: .5rem;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 1.5rem;
+}
+
+#results, #profits, #growth {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+#contact {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+#consulting, #solutions, #mergers, #transformation, #information, #advisory, #innovation {
+    background-color: var(--blue);
+    border: solid var(--blue) 1px;
+    border-radius: 10px;
+    color: var(--white);
 }
 
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
