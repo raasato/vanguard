@@ -66,8 +66,7 @@ table {
 nav {
     background-color: var(--black);
     display: grid;
-    justify-content: end;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 0 0 1fr .5fr;
 }
 
 nav ul {
@@ -78,6 +77,9 @@ nav ul {
     overflow: hidden;
     text-align: center;
     max-height: 0;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 2;
 }
 
 nav h2 {
@@ -108,6 +110,8 @@ nav label {
     padding: 1.5rem;
     user-select: none;
     margin-top: 1.5rem;
+    grid-column-start: 4;
+    grid-row-start: 1;
 }
 
 /*builds middle line*/
@@ -141,15 +145,12 @@ label span:after {
 
 input {
     display: none;
+    visibility: hidden;
 }
 
 /*adds height to drop down menu*/
 input:checked ~ ul {
     max-height: 500px;
-    display: inline-grid;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    justify-content: space-around;
 }
 
 header {
@@ -224,8 +225,8 @@ h2 {
     border: solid var(--blue) 1px;
     border-radius: 10px;
     color: var(--white);
-    padding: 1rem;
-    margin: 1rem;
+    padding: 2rem;
+    margin: .5rem;
 }
 
 h3 {
@@ -268,6 +269,11 @@ input {
     height: 2rem;
 }
 
+textarea {
+    width: 98%;
+    border: solid var(--blue) 2px;
+}
+
 #submit {
     background-color: var(--blue);
     border: solid var(--blue) 1px;
@@ -279,10 +285,16 @@ input {
     height: 3rem;
 }
 
+#submit:hover {
+    background-color: var(--red);
+    border: solid 1px var(--red);
+}
+
 footer div {
     background-color: var(--black);
     color: var(--white);
     text-align: center;
+    padding-bottom: 2rem;
 }
 
 footer p {
@@ -291,6 +303,11 @@ footer p {
 
 footer a {
     color: var(--blue);
+}
+
+#tel {
+    color: var(--white);
+    text-decoration: none;
 }
 
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
@@ -384,9 +401,10 @@ header img {
         overflow:visible;
         position:absolute;
         top: 1.5rem;
-        left:.5rem;
+        right: 5rem;
         display: grid;
         grid-template-columns:1fr 1fr 1fr;
+        max-width: 50%;
     }
 
     nav li a {
@@ -398,17 +416,49 @@ header img {
     }
 
     #results {
+        display: grid;
         grid-template-columns: 1fr 1fr;
     }
+
+    #results p {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
     .results-container {
         flex-direction: row;
         justify-content: space-between;
     }
+
     .results-table {
         width: 50%;
+        grid-area: "results-table";
     }
+
     .bar-chart {
         width: 50%;
+    }
+
+    .graph {
+        grid-area: "graph";
+    }
+
+    input {
+    display: block;
+    border: var(--blue) solid 2px;
+    margin-bottom: .5rem;
+    width: 98%;
+    height: 2rem;
+    }
+
+    #services {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #services h2 {
+        grid-column-start: 1;
+        grid-column-end: 3;
     }
 }
 /* MEDIA QUERIES (LARGE) */
