@@ -31,15 +31,15 @@
             </div>
         </header>
         <main>
-            <div class="container">
-                <section id="request">
+            <section id="request">
+                <div class="container">
                     <div class="block">
                         <h2>Innovation & Investment</h2>
                         <p>We empower businesses to lead the future with high-impact strategies, market intelligence, and financial solutions that drive success.</p>
                         <a href="#contact">Request a Consultation</a>
                     </div>
-                </section>
-            </div>
+                </div>
+            </section>
             <div class="container">
                 <section id="about">
                     <h2>Our Expertise. Your Edge.</h2>
@@ -75,10 +75,12 @@
                     </div>
                 </section>
             </div>
-            <div class="container">
-                <section id="results">
-                    <h2>Proven Results</h2>
-                    <p>Our data-driven strategies have delivered outstanding ROI, leading to significant revenue growth.</p>
+            <section id="results">
+                <div class="container">
+                    <div class="proven">
+                        <h2>Proven Results</h2>
+                        <p>Our data-driven strategies have delivered outstanding ROI, leading to significant revenue growth.</p>
+                    </div>
                     <div class="results-table">
                         <h2>Profits</h2>
                         <table>
@@ -125,34 +127,42 @@
                             <div class="bar" data-year="2024" style="--height: 100%;"></div>
                         </div>
                     </div>
-                </section>
-            </div>
-            <div class="container">
-                <section id="contact">
+                </div>
+            </section>
+            <section id="contact">
+                <div class="container">
                     <h2>Contact Us</h2>
                     <p>Want to take your business to the next level? Get in touch with our elite team today.</p>
                     <form>
-                        <label for="FullName">Full Name</label>
-                        <input type="text" name="FullName" id="FullName" required>
-                        <label for="email">Email Address</label>
-                        <input type="email" name="email" id="email" required>
-                        <label for="Cname">Company Name</label>
-                        <input type="text" name="Cname" id="Cname">
-                        <label for="industry">Industry</label>
-                        <input type="text" name="industry" id="industry">
-                        <label for="help">How can we help you?</label>
-                        <textarea id="help" name="help" rows="4" cols="50"></textarea>
+                        <div class="FullName">
+                            <label for="FullName">Full Name</label>
+                            <input type="text" name="FullName" id="FullName" required>
+                        </div>
+                        <div class="email">
+                            <label for="email">Email Address</label>
+                            <input type="email" name="email" id="email" required>
+                        </div>
+                        <div class="Cname">
+                            <label for="Cname">Company Name</label>
+                            <input type="text" name="Cname" id="Cname">
+                        </div>
+                        <div class="industry">
+                            <label for="industry">Industry</label>
+                            <input type="text" name="industry" id="industry">
+                        </div>
+                        <div class="help">
+                            <label for="help">How can we help you?</label>
+                            <textarea id="help" name="help" rows="4" cols="50"></textarea>
+                        </div>
                         <input type="submit" value="Submit" id="submit">
                     </form>
-                </section>
-            </div>
+                </div>
+            </section>
         </main>
         <footer>
-            <div class="container">
-                <p>&copy;2025 Vanguard. All rights reserved.</p>
-                <p>Email: <a href="mailto:info@vanguard.com">info@vanguard.com</a></p>
-                <p>Phone: <a href="tel:4801234567" id="tel">480.123.4567</a></p>
-            </div>
+            <p>&copy;2025 Vanguard. All rights reserved.</p>
+            <p>Email: <a href="mailto:info@vanguard.com">info@vanguard.com</a></p>
+            <p>Phone: <a href="tel:4801234567" id="tel">480.123.4567</a></p>
         </footer>
     </body>
 </html>

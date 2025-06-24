@@ -155,9 +155,6 @@ input:checked ~ ul {
 
 header {
     display: flex;
-}
-
-header div {
     background-color: var(--black);
 }
 
@@ -180,11 +177,13 @@ header img {
     grid-template-rows: 1fr 1fr 1fr;
     backdrop-filter: blur(10px);
     padding: 1rem;
+    margin-top: 10rem;
 }
 
 #request h2 {
     font-weight: bold;
     font-size: 2rem;
+    transition: translateY(-100%);
 }
 
 #request a {
@@ -202,10 +201,19 @@ header img {
     justify-self: center;
 }
 
+#request a:hover {
+    background-color: var(--red);
+    border: solid 1px var(--red);
+}
+
 h2 {
     font-weight: bold;
     font-size: 2rem;
     margin: 1.5rem;
+}
+
+#services {
+    margin-bottom: 3rem;
 }
 
 #results, #profits, #growth {
@@ -267,6 +275,7 @@ input {
     margin-bottom: .5rem;
     width: 98%;
     height: 2rem;
+    visibility: visible;
 }
 
 textarea {
@@ -290,7 +299,7 @@ textarea {
     border: solid 1px var(--red);
 }
 
-footer div {
+footer {
     background-color: var(--black);
     color: var(--white);
     text-align: center;
@@ -336,6 +345,7 @@ html {
     overflow: hidden;
     color: var(--white);
     backdrop-filter: blur(10px);
+    width: 100%;
 }
 
 /* ADD FLOATING SVG LOGO BEFORE THE H1 */
@@ -401,12 +411,11 @@ header img {
         overflow:visible;
         position:absolute;
         top: 1.5rem;
-        right: 5rem;
         display: grid;
         grid-template-columns:1fr 1fr 1fr;
         max-width: 50%;
     }
-
+    
     nav li a {
         display:inline-block;
     }  
@@ -415,12 +424,11 @@ header img {
         display:none;
     }
 
-    #results {
+    #results div {
         display: grid;
-        grid-template-columns: 1fr 1fr;
     }
 
-    #results p {
+    .proven {
         grid-column-start: 1;
         grid-column-end: 3;
     }
@@ -432,7 +440,8 @@ header img {
 
     .results-table {
         width: 50%;
-        grid-area: "results-table";
+        grid-column-start: 1;
+        grid-column-end: 2;
     }
 
     .bar-chart {
@@ -440,7 +449,8 @@ header img {
     }
 
     .graph {
-        grid-area: "graph";
+        grid-column-start: 2;
+        grid-column-end: 3;
     }
 
     input {
@@ -462,3 +472,50 @@ header img {
     }
 }
 /* MEDIA QUERIES (LARGE) */
+@media screen and (min-width: 1200px){
+    #services {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: .5fr 1fr 1fr;
+    }
+
+    #servies h2 {
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+    #consulting {
+        grid-row-start: 2;
+    }
+
+    #solutions {
+        grid-row-start: 2;
+        grid-column-start: 2;
+    }
+
+    #mergers {
+        grid-row-start: 2;
+        grid-column-start: 3;
+    }
+
+    #transformation {
+        grid-row-start: 3;
+        grid-column-start: 1;
+    }
+
+    #advisory {
+        grid-row-start: 3;
+        grid-column-start: 2;
+    }
+
+    #innovation {
+        grid-row-start: 3;
+        grid-column-start: 3;
+    }
+
+    form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+}
