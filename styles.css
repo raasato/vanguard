@@ -183,8 +183,14 @@ header img {
 #request h2 {
     font-weight: bold;
     font-size: 2rem;
-    transition: translateY(-100%);
+    animation: slide 1s ease-in-out;
 }
+
+@keyframes slide {
+    0% {transform: translateY(-100%); opacity: 0;}
+    100% {transform: translateY(0); opacity: 1;}
+}
+
 
 #request a {
     color: var(--white);
@@ -199,6 +205,7 @@ header img {
     max-width: fit-content;
     max-height: fit-content;
     justify-self: center;
+    animation: slide 1s ease-in-out;
 }
 
 #request a:hover {
